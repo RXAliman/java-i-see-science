@@ -11,11 +11,6 @@ public class GameViewManager
 	
 	private JFrame window;
 	private GameView currentView;
-//	private enum difficulty {
-//		EASY,
-//		MEDIUM,
-//		HARD
-//	}
 	
 	// Getter method to access the singleton class object
 	public static synchronized GameViewManager getInstance()

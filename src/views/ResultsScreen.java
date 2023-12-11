@@ -45,7 +45,7 @@ public class ResultsScreen implements GameView
 	}
 	
 	// Initialize results buttons
-	public void initializeButtons()
+	private void initializeButtons()
 	{	
 		// Set button size and count
 		final int buttonWidth = 200;
@@ -56,7 +56,7 @@ public class ResultsScreen implements GameView
 		// Initialize the results button panel
 		resultsButtonPanel = new JPanel();
 		resultsButtonPanel.setLayout(new GridLayout(1,buttonCount,padding,padding));
-		resultsButtonPanel.setBackground(windowColor);
+		resultsButtonPanel.setBackground(new Color(0,0,0,0));
 		resultsButtonPanel.setBounds(
 			(window.getWidth() / 2) - (buttonWidth * buttonCount / 2),
 			500,
