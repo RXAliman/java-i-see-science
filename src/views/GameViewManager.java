@@ -28,42 +28,24 @@ public class GameViewManager
 	// Switch current view to the Main Menu
 	public void switchToMainMenu()
 	{
-		// Do clean-ups if necessary
-		if (currentView != null)
-		{
-			
-		}
-		
 		// Set currentView to 'MainMenu' screen
 		currentView = new MainMenu(window);
 		currentView.initialize();
 	}
 	
 	// Switch current view to 'In-game' screen
-	public void switchToInGameScreen()
+	public void switchToInGameScreen(GameDifficulty difficulty)
 	{
-		// Do clean-ups if necessary
-		if (currentView != null)
-		{
-			
-		}
-		
 		// Set currentView to 'InGameScreen' view
-		currentView = new InGameScreen(window);
+		currentView = new InGameScreen(window, difficulty);
 		currentView.initialize();
 	}
 	
 	// Switch current view to 'Results' screen
-	public void switchToResultsScreen()
+	public void switchToResultsScreen(GameDifficulty difficulty)
 	{
-		// Do clean-ups if necessary
-		if (currentView != null)
-		{
-			
-		}
-		
 		// Set currentView to 'InGameScreen' view
-		currentView = new ResultsScreen(window);
+		currentView = new ResultsScreen(window, difficulty);
 		currentView.initialize();
 	}
 	

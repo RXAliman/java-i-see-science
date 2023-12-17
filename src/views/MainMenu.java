@@ -172,7 +172,7 @@ public class MainMenu implements GameView
 		window.getContentPane().remove(appNameLabel);
 		
 		// Set button size and count
-		final int buttonWidth = 300;
+		final int buttonWidth = 400;
 		final int buttonHeight = 100;
 		final int buttonCount = 4;
 		final int verticalGap = 10;
@@ -195,7 +195,7 @@ public class MainMenu implements GameView
 		easyButton.setBackground(new Color(0xEEEEEE));
 		easyButton.addActionListener(
 		e -> {
-			GameViewManager.getInstance().switchToInGameScreen();
+			GameViewManager.getInstance().switchToInGameScreen(GameDifficulty.EASY);
 		});
 		difficultyPanel.add(easyButton);
 		
@@ -206,7 +206,7 @@ public class MainMenu implements GameView
 		mediumButton.setBackground(new Color(0xEEEEEE));
 		mediumButton.addActionListener(
 		e -> {
-			GameViewManager.getInstance().switchToInGameScreen();
+			GameViewManager.getInstance().switchToInGameScreen(GameDifficulty.MEDIUM);
 		});
 		difficultyPanel.add(mediumButton);
 		
@@ -217,11 +217,11 @@ public class MainMenu implements GameView
 		hardButton.setBackground(new Color(0xEEEEEE));
 		hardButton.addActionListener(
 		e -> {
-			GameViewManager.getInstance().switchToInGameScreen();
+			GameViewManager.getInstance().switchToInGameScreen(GameDifficulty.HARD);
 		});
 		difficultyPanel.add(hardButton);
 		
-		backButton = new JButton("Back");
+		backButton = new JButton(new ImageIcon(getClass().getResource("/images/back_icon.png")));
 		backButton.setSize(buttonWidth, buttonHeight);
 		backButton.setFont(mainMenuButtonFont);
 		backButton.setFocusPainted(false);
@@ -233,7 +233,7 @@ public class MainMenu implements GameView
 		difficultyPanel.add(backButton);
 		
 		selectDifficultyText.setFont(mainMenuButtonFont);
-		selectDifficultyText.setForeground(Color.WHITE);
+		selectDifficultyText.setForeground(Color.BLACK);
 		selectDifficultyText.setSize(400,50);
 		selectDifficultyText.setLocation(
 			window.getWidth() / 2 - selectDifficultyText.getWidth() / 2,
